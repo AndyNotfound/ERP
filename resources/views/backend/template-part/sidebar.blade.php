@@ -14,13 +14,13 @@
             </li>
             <br>
             <br>
-            <li class="nav-item start @php echo "active",(request()->path() != 'admin/dashboard')?:"";@endphp">
+            <!-- <li class="nav-item start @php echo "active",(request()->path() != 'admin/dashboard')?:"";@endphp">
                 <a href="{{route('admin.dashboard')}}" class="nav-link nav-toggle">
                     <i class="icon-home"></i>
                     <span class="title">Dashboard</span>
                     <span class="selected"></span>
                 </a>
-            </li>
+            </li> -->
 
 
             <li class="nav-item @if( request()->path() == 'admin/department' || request()->path() == 'admin/department' ) active open @endif
