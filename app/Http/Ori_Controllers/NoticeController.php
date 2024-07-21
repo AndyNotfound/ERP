@@ -15,7 +15,7 @@ class NoticeController extends Controller
     public function index()
     {
         $notice = Notice::all();
-        return view('backend.notice.notice',compact('notice'));
+        return view('backend.notice.notice', compact('notice'));
     }
 
     /**
@@ -37,8 +37,8 @@ class NoticeController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, array(
-           'title' => 'required|max:191',
-           'description' => 'required'
+            'title' => 'required|max:191',
+            'description' => 'required'
         ));
         $notice = new Notice;
         $notice->title = $request->title;

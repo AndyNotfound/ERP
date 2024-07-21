@@ -10,19 +10,19 @@ class HolidayController extends Controller
 {
     public function index()
     {
-         $holiday = Holiday::orderBy('start_date', 'ASC')->get();
+        $holiday = Holiday::orderBy('start_date', 'ASC')->get();
+        $months_array = [];
+        foreach ($holiday as $data) {
+            $a = date("F-Y", strtotime($data->start_date));
 
-       foreach($holiday as $data) {
-           $a = date("F-Y", strtotime($data->start_date));
+            $that = date("Ym", strtotime($data->start_date));
 
-           $that = date("Ym", strtotime($data->start_date));
+            $currentMonth = date("Ym");
 
-           $currentMonth = date("Ym");
-
-           if ($that >= $currentMonth){
-               $months_array[] = $a;
-                }
+            if ($that >= $currentMonth) {
+                $months_array[] = $a;
             }
+        }
 
         $months = array_unique($months_array);
 
@@ -33,7 +33,7 @@ class HolidayController extends Controller
     public function dateAjax(Request $request)
     {
         $holiday = $request->name;
-        $my = explode("-",$holiday);
+        $my = explode("-", $holiday);
         $mnm = $my[0];
         $yr = $my[1];
         $date = date_parse($mnm);
@@ -44,10 +44,10 @@ class HolidayController extends Controller
 
         $output = "";
 
-        foreach($start_month as $value){
+        foreach ($start_month as $value) {
             $output .= ' <tr >
-                            <td>'.$value->start_date.''.'/'.''.$value->end_date.'</td>
-                            <td> '.$value->occasion.' </td>
+                            <td>' . $value->start_date . '' . '/' . '' . $value->end_date . '</td>
+                            <td> ' . $value->occasion . ' </td>
                             
                         </tr>';
         }
@@ -56,9 +56,9 @@ class HolidayController extends Controller
 
     public function store(Request $request)
     {
-        
+
         $this->validate($request, array(
-            'start_date' => 'required|max:191' ,
+            'start_date' => 'required|max:191',
             'end_date'   => 'max:191',
             'occasion'   => 'required|max:191',
         ));
@@ -73,7 +73,7 @@ class HolidayController extends Controller
 
     public function destroy(Holiday $holiday, $id)
     {
-        
+
         $holiday = Holiday::find($id);
         $holiday->delete();
         return redirect()->back()->withMsg('Successfully Deleted');
@@ -83,18 +83,18 @@ class HolidayController extends Controller
     {
         $holiday = Holiday::orderBy('start_date', 'ASC')->get();
 
-        foreach($holiday as $data) {
+        foreach ($holiday as $data) {
             $a = Date("F-Y", strtotime($data->start_date));
 
             $that = Date("Ym", strtotime($data->start_date));
 
             $currentMonth = Date("Ym");
 
-            if ($that>=$currentMonth){
+            if ($that >= $currentMonth) {
                 $months[] = $a;
             }
         }
         $months = array_unique($months);
-        return view('users.holiday.holiday',compact('months'));
+        return view('users.holiday.holiday', compact('months'));
     }
 }

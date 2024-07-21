@@ -15,7 +15,7 @@ class NoticeController extends Controller
     public function index()
     {
         $notice = Notice::all();
-        return view('backend.notice.notice',compact('notice'));
+        return view('backend.notice.notice', compact('notice'));
     }
 
     /**
@@ -36,16 +36,16 @@ class NoticeController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $this->validate($request, array(
-           'title' => 'required|max:191',
-           'description' => 'required'
+            'title' => 'required|max:191',
+            'description' => 'required'
         ));
         $notice = new Notice;
         $notice->title = $request->title;
         $notice->description = $request->description;
         $notice->save();
-        return redirect('notice')->withMsg('Notice Created');
+        return redirect('admin/notice')->withMsg('Notice Created');
     }
 
     /**
@@ -80,7 +80,7 @@ class NoticeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
         $notice = Notice::find($id);
         $this->validate($request, array(
             'title' => 'required|max:191',
@@ -100,7 +100,7 @@ class NoticeController extends Controller
      */
     public function destroy(Notice $notice, $id)
     {
-        
+
         $notice = Notice::find($id);
         $notice->delete();
         return redirect()->back()->withMsg('Successfully Deleted');

@@ -33,7 +33,7 @@
                             <tbody>
                             @foreach($payment as $data)
                                 <tr >
-                                    <td>{{number_format($data->salary,2)}} Taka</td>
+                                    <td>{{number_format($data->salary,2)}}</td>
                                     <td>{{date('jS M Y',strtotime($data->from_date))}} - {{date('jS M Y', strtotime($data->to_date))}}</td>
                                     <td>
                                         @if($data->status == 0 )
