@@ -195,7 +195,7 @@
 
 
 
-            <li class="nav-item  @if( request()->path() == 'admin/office' || request()->path() == 'admin/office' ) active open @endif
+            <!-- <li class="nav-item  @if( request()->path() == 'admin/office' || request()->path() == 'admin/office' ) active open @endif
             @if( request()->path() == 'admin/food/mill' || request()->path() == 'admin/food/mill' ) active open @endif
             @if( request()->path() == 'admin/catering/system' || request()->path() == 'admin/catering/system' ) active open @endif
             @if( request()->path() == 'admin/catering/add' || request()->path() == 'admin/catering/add' ) active open @endif
@@ -249,9 +249,9 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> -->
 
-            <li class="nav-item @if( request()->path() == 'admin/customer/management' || request()->path() == 'admin/customer/management' ) active open @endif
+            <!-- <li class="nav-item @if( request()->path() == 'admin/customer/management' || request()->path() == 'admin/customer/management' ) active open @endif
             @if( request()->path() == 'admin/customer/balance' || request()->path() == 'admin/customer/balance' ) active open @endif">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="fa fa-users" aria-hidden="true"></i>
@@ -273,9 +273,9 @@
                     </li>
 
                 </ul>
-            </li>
+            </li> -->
 
-            <li class="nav-item @if( request()->path() == 'admin/products' || request()->path() == 'admin/products' ) active open @endif
+            <!-- <li class="nav-item @if( request()->path() == 'admin/products' || request()->path() == 'admin/products' ) active open @endif
             @if( request()->path() == 'admin/category' || request()->path() == 'admin/category' ) active open @endif
             @if( request()->path() == 'admin/product/stock' || request()->path() == 'admin/product/stock' ) active open @endif">
                 <a href="javascript:;" class="nav-link nav-toggle">
@@ -304,9 +304,9 @@
                     </li>
 
                 </ul>
-            </li>
+            </li> -->
 
-            <li class="nav-item @if( request()->path() == 'admin/sale' || request()->path() == 'admin/sale' ) active open @endif
+            <!-- <li class="nav-item @if( request()->path() == 'admin/sale' || request()->path() == 'admin/sale' ) active open @endif
             @if( request()->path() == 'admin/stock/product/history' || request()->path() == 'admin/stock/product/history' ) active open @endif">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="fa fa-print" aria-hidden="true"></i>
@@ -328,9 +328,9 @@
                     </li>
 
                 </ul>
-            </li>
+            </li> -->
 
-            <li class="nav-item @if( request()->path() == 'admin/bank' || request()->path() == 'admin/bank' ) active open @endif
+            <!-- <li class="nav-item @if( request()->path() == 'admin/bank' || request()->path() == 'admin/bank' ) active open @endif
             @if( request()->path() == 'admin/transaction' || request()->path() == 'admin/transaction' ) active open @endif
             @if( request()->path() == 'admin/add/transaction' || request()->path() == 'admin/add/transaction' ) active open @endif
             @if( request()->path() == 'admin/expense/history' || request()->path() == 'admin/expense/history' ) active open @endif
@@ -363,9 +363,9 @@
                     </li>
 
                 </ul>
-            </li>
+            </li> -->
 
-            <li class="nav-item @if( request()->path() == 'admin/supplier' || request()->path() == 'admin/supplier' ) active open @endif
+            <!-- <li class="nav-item @if( request()->path() == 'admin/supplier' || request()->path() == 'admin/supplier' ) active open @endif
             @if( request()->path() == 'admin/supply/management' || request()->path() == 'admin/supply/management' ) active open @endif
             @if( request()->path() == 'admin/supply/reports' || request()->path() == 'admin/supply/reports' ) active open @endif">
                 <a href="javascript:;" class="nav-link nav-toggle">
@@ -391,9 +391,9 @@
                     </li>
 
                 </ul>
-            </li>
+            </li> -->
 
-            <li class="nav-item @if( request()->path() == 'admin/add/personal/loan' || request()->path() == 'admin/add/personal/loan' ) active open @endif
+            <!-- <li class="nav-item @if( request()->path() == 'admin/add/personal/loan' || request()->path() == 'admin/add/personal/loan' ) active open @endif
             @if( request()->path() == 'admin/personal/loan' || request()->path() == 'admin/personal/loan' ) active open @endif
             @if( request()->path() == 'admin/office/loan' || request()->path() == 'admin/office/loan' ) active open @endif
             @if( request()->path() == 'admin/add/office/loan' || request()->path() == 'admin/add/office/loan' ) active open @endif">
@@ -448,9 +448,9 @@
                     </li>
 
                 </ul>
-            </li>
+            </li> -->
 
-            <li class="nav-item @if( request()->path() == 'admin/add/purchase' || request()->path() == 'admin/add/purchase' ) active open @endif
+            <!-- <li class="nav-item @if( request()->path() == 'admin/add/purchase' || request()->path() == 'admin/add/purchase' ) active open @endif
             @if( request()->path() == 'admin/purchase' || request()->path() == 'admin/purchase' ) active open @endif
             @if( request()->path() == '' || request()->path() == '' ) active open @endif">
                 <a href="javascript:;" class="nav-link nav-toggle">
@@ -472,7 +472,7 @@
                     </li>
 
                 </ul>
-            </li>
+            </li> -->
 
             <li class="nav-item start @php echo "active",(request()->path() != 'admin/general')?:"";@endphp">
                 <a href="{{route('general.index')}}" class="nav-link nav-toggle">
